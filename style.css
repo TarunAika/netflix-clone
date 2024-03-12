@@ -1,0 +1,1445 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Helvetica, sans-serif;
+    color: white;
+    font-style: normal;
+}
+
+.main-body {
+    background-color: #000;
+}
+
+.signup-page {
+    background: linear-gradient(45deg, rgba(0,0,0,0.6) 10%, rgba(0,0,0,0.6) 55%, rgba(0,0,0,0.6) 75%, rgba(0,0,0,0.6) 90%), url("./assets/netflix-background.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.login-page {
+    background-color: black;
+}
+
+.plans-page nav {
+    background-color: white;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+nav {
+    padding: 25px 12%;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: 800;
+}
+
+p {
+    font-size: 16px;
+}
+
+li {
+    list-style: none;
+}
+
+form p {
+    margin-bottom: 20px;
+    align-self: center;
+    color: gray;
+    font-weight: 100;
+ }
+
+.netflix-logo {
+    height: 40px;
+    fill: rgb(212, 0, 0);
+}
+
+.sb {
+    margin-bottom: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup-box {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 450px;
+    border-radius: 5px;
+    margin-bottom: 20vh;
+}
+
+.signup-box form {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.signup-box form h1 {
+    margin-bottom: 25px;
+}
+
+.s-inputs {
+    position: relative;
+    width: 100%;
+    margin-bottom: 15px;
+    border: 1px solid gray;
+    border-radius: 3px;
+}
+
+.s-inputs label {
+    color: gray;
+    font-size: 16px;
+    position: absolute;
+    top: 35%;
+    left: 20px;
+    transition: 0.2s;
+}
+
+.s-inputs input {
+    font-size: 16px;
+    width: 100%;
+    border: none;
+    outline: none;
+    height: 100%;
+    padding: 20px;
+    transform: translateY(10px);
+    background-color: transparent;
+    border-radius: 3px;
+}
+
+.s-inputs:focus-within {
+    outline: 2px solid white;
+    outline-offset: 3px;
+}
+
+.s-inputs input:focus {
+    outline: none;
+}
+
+.s-inputs input:focus label {
+    font-size: 16px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: gray;
+}
+
+.s-inputs input:focus ~ label {
+    font-size: 14px;
+    transform: translate(2px,-20px);
+}
+
+.signin-btn, .s-code {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    font-size: 16px;
+}
+
+.signin-btn {
+    background-color: red;
+    cursor: pointer;
+}
+
+.signin-btn:hover,
+.plans-page nav a:hover,
+.finish .next-btn:hover,
+.account-create .next-btn:hover {
+    transition: all 0.3s ease;
+    background-color: rgb(212, 0, 0);
+}
+
+.s-code {
+    background-color: gray;
+}
+
+.s-code:hover {
+    background-color: rgba(128, 128, 128, 0.507);
+}
+
+form a {
+    margin-bottom: 20px;
+    align-self: center;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 100;
+}
+
+form a:hover, .s-foot-inner a:hover {
+    text-decoration: underline;
+}
+
+.remember-me {
+    display: flex;
+    gap: 6px;
+}
+
+.remember-me p {
+    color: white;
+}
+
+.remember-me input {
+    height: 20px;
+    width: 20px;
+}
+
+.remember-me input:checked {
+    background-color: white;
+}
+
+.licence, .licence a {
+    font-size: 14px;
+    font-weight: 0;
+    line-height: 1.5;
+}
+
+.licence a {
+    color: rgb(0, 113, 235);
+    text-decoration: none;
+}
+
+.licence {
+    margin-bottom: 70px;
+}
+
+.s-footer {
+    margin-top: 40px;
+    padding-bottom: 80px;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.s-foot-inner {
+    padding: 40px 12%;
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+}
+
+.s-foot-inner ul {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    display: grid;
+    grid-template: repeat(4, 1fr)/ repeat(4, 1fr);
+}
+
+.s-foot-inner a, .s-foot-inner p {
+    color: rgba(255, 255, 255, 0.702);
+    font-weight: 100;
+    font-size: 16px;
+}
+
+.s-footer .select-lang {
+    transform: translateX(-20px);
+}
+
+.contact-num, .s-footer a {
+    text-decoration: none;
+}
+
+.main-nav {
+    padding: 25px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    position: relative;
+    z-index: 2;
+}
+
+.main-nav .nav-sidepart {
+    margin-left: auto;
+}
+
+.nav-sidepart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-sidepart .signin-btn {
+    margin-bottom: 0;
+    padding: 7px 14px;
+}
+
+.select-lang {
+    display: flex;
+    align-items: center;
+}
+
+.select-lang select {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.lang-svg {
+    transform: translateX(30px);
+}
+
+.arrow-svg {
+    transform: translateX(-30px);
+}
+
+.lang-svg, .arrow-svg {
+    fill: white;
+    width: 20px;
+    height: 20px;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    height: 100%;
+    width: 120px;
+    padding: 6px 20px;
+    background-color: transparent;
+    text-align: center;
+    border-radius: 3px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.1s ease;
+}
+
+select:focus {
+    outline: 1px solid white;
+    outline-offset: 2px;
+}
+
+.carousel-container {
+    transform: translateY(-90px);
+}
+
+.carousel {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.9), rgba(123, 123, 123, 0), rgba(0,0,0,0.9));
+}
+
+.carousel img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    z-index: -1;
+    transform-origin: right;
+    transition: 0.7s opacity ease-in-out;
+    transition-delay: 200ms;
+}
+
+.slide[data-active] {
+    opacity: 1;
+    transition-delay: 0ms;
+}
+
+button svg {
+    width: 30px;
+    height: 30px;
+    fill: rgb(158, 158, 158);
+    transition: 0.3s;
+}
+
+.carousel-btn {
+    position: absolute;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.834);
+    border: none;
+    border-radius: 5px;
+    padding: 40px 0px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel-btn:hover svg,
+.carousel-btn:focus svg {
+    fill: white;
+}
+
+.carousel-btn.prev {
+    left: 50px;
+}
+
+.carousel-btn.next {
+    right: 50px;
+}
+
+.carousel-description {
+    width: 600px;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+}
+
+.c-descript-pos {
+    position: absolute;
+    top: 45%;
+    left: 10%;
+}
+
+.carousel-description h1 {
+    font-size: 56px;
+}
+
+.carousel-description h2 {
+    font-size: 20px;
+}
+
+.carousel-description h1, h2, p {
+    margin-bottom: 20px;
+}
+
+.carousel-description h2 {
+    font-weight: 500;
+}
+
+.carousel-description .email-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.email-section .s-inputs {
+    background-color: #0000007b;
+}
+
+.email-section .signin-btn {
+    height: 100%;
+    padding: 15px 0;
+    width: 200px;
+    font-size: 26px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(2px);
+    
+}
+
+.email-section .signin-btn svg {
+    fill: white;
+}
+
+.second-slide div, .third-slide div {
+    display: flex;
+    gap: 10px;
+}
+
+.second-slide  div span, .third-slide div span {
+    background-color: gray;
+    color: white;
+    padding: 5px;
+    font-size: 14px;
+    border-radius: 3px;
+    margin-bottom: 20px;
+}
+
+.second-slide, .third-slide {
+    display: none;
+}
+
+.third-slide img {
+    height: 40px;
+}
+
+.top-20 {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+}
+
+.curve-box {
+    transform: translateY(-5vh);
+}
+
+.curve {
+    height: 5vh;
+    width: 100%;
+    background: linear-gradient(to bottom, rgb(0, 0, 40), rgb(0, 0, 28), rgb(0, 0, 0));
+    border-top: 5px solid rgb(253, 0, 84);
+    border-top-left-radius:  100% ;
+    border-top-right-radius:  100% ;
+}
+
+.sub-plans {
+    margin: 2% 10% 5%;
+}
+
+.plans-box {
+    display: grid;
+    gap: 15px;
+    grid-template: repeat(2, 1fr)/repeat(2, 1fr);
+}
+
+.plans {
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.sub-plans .plans,
+.f-box,
+.membership,
+.qtn,
+.ans {
+    padding: 30px 20px;
+}
+
+.sub-plans .plans,
+.f-box,
+.membership {
+    border-radius: 15px;
+}
+
+.sub-plans .plans {
+    background: linear-gradient(to bottom, #b21541, #891133, #640c25, #360815);
+}
+
+.sub-plans .plans p:last-child {
+    margin-bottom: 0;
+}
+
+.sub-plans > p {
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.sub-plans h3,
+.membership-conatiner h3,
+.features-container h3,
+.trending-cards h3, 
+.selection-items,
+.faqs-container > .faqs > h3 {
+    margin-bottom: 20px;
+}
+
+.trending-cards,
+.features-container,
+.membership-conatiner,
+.faqs-container,
+.main-body footer {
+    margin: 10px 10% 5%;
+}
+
+.trending-cards h3,
+.features-container > h3,
+.membership-conatiner h3,
+.faqs-container h3 {
+    font-size: 30px;
+}
+
+.selection-items {
+    display: flex;
+}
+
+.selection-items .select-lang select{
+    width: 120px;
+    padding: 6px 20px;
+    text-align: left;
+}
+
+.card img {
+    height: 300px;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+
+.card img:first-child {
+    margin-left: 20px;
+}
+
+.movie-cards {
+    display: flex;
+    gap: 15px;
+    overflow-x: scroll;
+    scrollbar-width: none; 
+    -ms-overflow-style: none
+}
+
+.movie-cards::-webkit-scrollbar {
+    display: none;
+}
+
+.membership {
+    height: 300px;
+    background: linear-gradient(to right, #a4133c, #800f2f, #011c26, #0e131f);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.mem-card-img img {
+    height: 300px;
+    transform: rotate(30deg) translateX(50%) scale(1.3);
+}
+
+.faqs > div {
+    margin-bottom: 10px;
+}
+
+.f-box {
+    height: 250px;
+    background: linear-gradient(to bottom right, #0e2e56,  #3a1002);
+    position: relative;
+}
+
+.f-box p {
+    color: rgb(168, 168, 168);
+}
+
+.f-box svg {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.features {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.faqs-container .qtn h3 {
+    font-weight: 400;
+}
+
+.qtn, .ans {
+    background-color: rgb(57, 57, 57);
+}
+
+.qtn {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 3px;
+    cursor: pointer;
+}
+
+.qtn, .qtn svg {
+    transition: all 0.3s ease;
+}
+
+.qtn h3 {
+    font-size: 26px;
+}
+
+.ans {
+    margin-bottom: 10px;;
+}
+
+.ans p {
+    font-size: 24px;
+}
+
+.qtn svg {
+    margin-left: auto;
+    height: 40px;
+    width: 40px;
+}
+
+.qtn:hover {
+    background-color: rgb(109, 109, 109);
+}
+
+.rotate {
+    transform: rotate(45deg);
+}
+
+footer .email-section {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+footer .email-section .signin-btn {
+    width: 250px;
+}
+
+.main-body .s-foot-inner a {
+    text-decoration: none;
+}
+
+.main-body .s-foot-inner a:hover {
+    text-decoration: underline;
+}
+
+.main-body .s-foot-inner {
+    padding: 40px 5%;
+}
+
+.main-body .s-foot-inner .select-lang {
+    margin: 20px auto auto -25px;
+}
+
+.main-body .s-foot-inner:last-child {
+    font-size: 14px;
+}
+
+.xl-screen {
+    overflow: hidden;
+}
+
+.plans-page nav {
+    display: flex;
+    align-items: center;
+}
+
+.plans-page nav a {
+    text-decoration: none;
+    margin-left: auto;
+    padding: 10px 20px;
+    background-color: rgb(255, 0, 0);
+    font-size: 16px;
+    border-radius: 3px;
+}
+
+.center-content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.plans-page h2,
+.plans-page p,
+.plans-page h3 {
+    color: #000;
+}
+
+.plans-intro {
+    margin: 25px auto;
+    width: 320px;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.plans-intro div:first-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.plans-intro div:first-child h2,
+.finish-container h2,
+.acc-creation-container h2,
+.selection-container h2 {
+    font-weight: 500;
+}
+
+.plans-intro div:first-child p {
+    margin-bottom: 5px;
+}
+
+.plans-intro div:nth-child(2),
+.plans-intro div:nth-child(3),
+.plans-intro div:nth-child(4) {
+    padding: 5px 25px;
+    display: flex;
+    gap: 5px;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.plans-intro div p {
+    margin-bottom: 0;
+}
+
+.plans-intro svg,
+.plan-name svg {
+    fill: red;
+    height: 24px;
+    width: 24px;
+}
+
+.plans-intro .check-mark {
+    height: 40px;
+    width: 40px;
+    margin-bottom: 20px;
+}
+
+.next-btn,
+.plans-page nav a {
+    padding: 10px 20px;
+    background-color: rgb(255, 0, 0);
+    font-size: 16px;
+    border-radius: 3px;
+}
+
+.next-btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+}
+
+.plans-page footer {
+    background-color: #e0e0e0ce;
+}
+
+.plans-page footer p,
+.plans-page footer a,
+.plans-page footer select,
+.plans-page footer .select-lang svg {
+    color: #000;
+    fill: #000;
+}
+
+.plans-page footer select {
+    background-color: transparent;
+    
+}
+
+.plans-page footer select:focus {
+    outline: 3px solid rgb(0, 0, 0);
+    outline-offset: 2px;
+}
+
+.finish-container,
+.acc-creation-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.finish,
+.account-create {
+    margin: 15vh 0;
+    width: 350px;
+}
+
+.finish-txt {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.finish .devices-svg {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.finish-container svg {
+    fill: red;
+}
+
+.finish-container .laptop-svg {
+    width: 50px;
+    height: 50px;
+}
+
+.finish-container .monitor-svg {
+    width: 70px;
+    height: 70px;
+}
+
+.finish-container .tablet-svg {
+    width: 40px;
+    height: 40px;
+}
+
+.finish-container .mobile-svg {
+    width: 25px;
+    height: 25px;
+}
+
+.account-create .s-inputs:focus-within {
+    outline: 2px solid rgb(0, 0, 0);
+    outline-offset: 4px;
+}
+
+.account-create .s-inputs input {
+    color: black;
+}
+
+.transition {
+    transform: scale(0.9);
+}
+
+.selection-container {
+    display: flex;
+    flex-direction: column;
+    padding: 25px 12%;
+}
+
+.select-plans {
+    margin: 25px 0;
+}
+
+.plan-name {
+    margin-bottom: 20px;
+    height: 100px;
+    padding: 15px;
+    position: relative;
+    border-radius: 10px;
+}
+
+.select-plans > h2 {
+    font-size: 40px;
+}
+
+.select-plans > p {
+    margin-bottom: 5px;
+}
+
+.plan-name h2,
+.plan-name p {
+    margin-bottom: 10px;
+    color: white;
+}
+
+.plan-name svg {
+    fill: white;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+}
+
+.plan-card .plan-attr p,
+.alternative-plans .plan-attr p {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.plan-card .plan-attr,
+.alternative-plans .plan-attr {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 10px;
+    border-bottom: 1px solid gray;
+}
+
+.plan-card .plan-attr p:last-child,
+.alternative-plans .plan-attr p:last-child {
+    margin-left: auto;
+}
+
+.plan-card {
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.plan-card:hover,
+.plan-card:checked {
+    transform: scale(1.01);
+    border: 1.5px solid gray;
+    border-radius: 20px;
+}
+
+.alternative-plans .plan-name {
+    transition: all 0.2s ease;
+}
+
+.alternative-plans .plan-name:hover {
+    transform: scale(1.02);
+}
+
+.plan-card .plan-attr:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+#premium .plan-name,
+.prem-bg {
+    background: linear-gradient(to bottom right, #3a0ca3 , #3847d6, #bd171a, #a4161a);
+}
+
+#standard .plan-name,
+.stand-bg {
+    background: linear-gradient(to bottom right, #240046, #3c096c, #7b2cbf, #9d4edd);
+}
+
+#basic .plan-name,
+.bas-bg {
+    background: linear-gradient(to bottom right, #3a0ca3 , #480ca8, #7209b7, #9d4edd);
+}
+
+#mobile .plan-name,
+.mob-bg {
+    background: linear-gradient(to bottom right, #023e8a , #3f37c9, #4361ee, #3a86ff);
+}
+
+.white-bg {
+    background: white;
+}
+
+.plan-flex {
+    display: grid;
+    gap: 20px;
+    grid-template: repeat(2, 1fr)/ repeat(2, 1fr);
+}
+
+.notice a {
+    text-decoration: none;
+    color: #3a86ff;
+}
+
+.selection-container .next-btn {
+    width: 300px;
+    align-self: center;
+}
+
+.alternative-plans .plan-name-container .plan-name {
+    width: 25%;
+}
+
+.alternative-plans .plan-name-container {
+    display: flex;
+    gap: 10px;
+    
+}
+
+.alternative-plans .plan-attr-container .plan-attr:last-child {
+    border-bottom: none;
+}
+
+.alternative-plans .border {
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+
+.alternative-plans .plan-name h2,
+.alternative-plans .plan-name p,
+.alternative-plans .plan-name svg {
+    color: #000;
+    fill: black;
+}
+
+.mob-bg,
+.prem-bg,
+.stand-bg,
+.bas-bg {
+    color: white;
+}
+
+.white-h2 {
+    color: white;
+}
+
+.alternative-plans {
+    display: none;
+}
+
+@media (min-width: 1600px) {
+    nav, .main-nav {
+        padding: 25px 20%;
+    }
+
+    .s-footer {
+        padding: 40px 12%;
+    }
+
+    .xl-screen {
+        margin: auto 13%;
+    }
+
+    .plans-intro {
+        margin-bottom: 30vh;
+    }
+
+    .finish {
+        margin-bottom: 25vh;
+    }
+
+}
+
+@media (max-width: 1300px) {
+    .plan-flex {
+        display: none;
+    }
+
+    .alternative-plans {
+        display: block;
+    }
+
+}
+
+
+@media (max-width: 950px) {
+    nav, .main-nav {
+        padding: 25px;
+    }
+
+    .carousel {
+        height: 90vh;
+        background: linear-gradient(to bottom, rgba(0,0,0,0.9), rgba(0,0,0,0.5), rgba(0,0,0,0.9));
+    }
+
+    .curve-box {
+        transform: translateY(-10vh);
+    }
+
+    .c-descript-pos, .top-20 {
+        left: 20px;
+    }
+
+    .carousel-description h1 {
+        font-size: 32px;
+    }
+
+    .carousel-description h2 {
+        font-weight: 400;
+    }
+
+    .carousel-description h1,
+    .carousel-description p {
+        width: 450px;
+    }
+
+    .carousel-btn.prev {
+        left: 150px;
+    }
+    
+    .carousel-btn.next {
+        right: 150px;
+    }
+
+    .email-section .s-inputs{
+        width: 250px;
+    }
+
+    .email-section .signin-btn {
+        font-size: 20px;
+    }
+
+    .or, .carousel-btn {
+        display: none;
+    }
+
+    .licence {
+        width: 350px;
+    }
+
+    .forget-pass p {
+        text-align: left;
+    }
+
+    .sub-plans {
+        margin: 10px 25px;
+    }
+
+    .plans-box {
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+    }
+
+    .trending-cards,
+    .membership-conatiner,
+    .features-container,
+    .faqs-container,
+    .main-body footer,
+    .selection-container {
+        margin: 7% 25px;
+    }
+
+    .trending-cards h3,
+    .faqs-container h3 {
+        font-size: 20px;
+    }
+
+    .card img {
+        height: 250px;
+        border: 2px solid white;
+        border-radius: 10px;
+    }
+
+    .membership {
+        flex-direction: column;
+        align-items: flex-start;
+        background: linear-gradient(to bottom, #a4133c, #800f2f, #011c26, #0e131f);
+    }
+
+    .mem-card-txt,
+    .mem-card-img {
+        height: 50%;
+    }
+
+    .mem-card-img {
+        align-self: flex-end;
+    }
+
+    .mem-card-img img {
+        height: 200px;
+        transform: rotate(30deg) translateX(30%) scale(1.3);
+    }
+
+    .f-box {
+        height: 150px;
+    }
+
+    .features {
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+    }
+
+    .qtn svg {
+        height: 24px;
+        width: 24px;
+    }
+
+    .ans p {
+        font-size: 16px;
+    }
+
+    footer .email-section {
+        justify-content: flex-start;
+    }
+
+    .plans-page .s-foot-inner {
+        padding: 25px;
+    }
+
+    .plan-name h2,
+    .plan-name p {
+        margin-bottom: 10px;
+        color: white;
+    }
+
+    .plan-name svg {
+        fill: white;
+        position: absolute;
+        bottom: 15px;
+        right: 15px;
+    }
+
+    .plan-card .plan-attr p {
+        margin-bottom: 10px;
+        font-size: 10px;
+    }
+
+    .selection-container {
+        padding: 0;
+    }
+
+    .select-plans > h2 {
+        font-size: 36px;
+    }
+
+    .alternative-plans .plan-name h2 {
+        font-size: 20px;
+    }
+
+    .alternative-plans .notice p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 820px) {
+    .netflix-logo {
+        height: 25px;
+    }
+
+    .s-foot-inner {
+        padding: 25px;
+    }
+
+    .second-slide p,.third-slide p {
+        display: none;
+    }
+
+    .second-slide img {
+        height: 140px;
+    }
+
+    .top-20 {
+        top: 30%;
+    }
+
+    .sub-plans {
+        margin: -10% 10% 10%;
+    }
+
+    .selection-items {
+        gap: 20px;
+        flex-direction: column;
+    }
+
+    .card img:first-child {
+        margin-left: 0;
+    }
+
+    .sub-plans {
+        margin: 25px;
+    }
+
+    .selection-items .select-lang select{
+        width: 100vw;
+    }
+
+    .mem-card-img img {
+        transform: rotate(30deg) translateX(30%)  scale(1.2);
+    }
+
+}
+
+@media (max-width: 600px) {
+    nav {
+        background-color: rgba(0, 0, 0, 0.9);
+    }
+
+    .signup-box {
+        background-color: rgba(0, 0, 0, 0.9);
+        width: 100%;
+    }
+
+    .signup-page, .main-body header {
+        overflow-x: hidden;
+    }
+
+    .signup-box form {
+        padding: 0 25px 25px 25px;
+    }
+
+    .sb, .signup-box {
+        margin-bottom: 0;
+    }
+
+    .s-footer {
+        margin-top: 0;
+        background: rgba(0, 0, 0, 0.9);
+        border-top: 1px solid gray;
+        font-weight: 500;
+    }
+
+    .c-descript-pos {
+        width: 100%;
+        top: 40%;
+    }
+
+    .carousel-description h1,
+    .carousel-description h2,
+    .carousel-description p {
+        width: 90%;
+        text-align: left;
+    }
+
+    .carousel-description .email-section {
+        gap: 10px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .email-section {
+        width: 100%; 
+    }
+    
+    .email-section .s-inputs {
+        margin-bottom: 0;
+        width: 90vw;
+        height: 50px;
+    }
+
+    .email-section .signin-btn-container {
+        align-self: flex-start;
+    }
+
+    .email-section .signin-btn {
+        gap: 5px;
+        padding: 5px;
+        font-size: 16px;
+        font-weight: 800;
+        width: 140px;
+    }
+
+    .licence {
+        width: 100%;
+    }
+
+    .second-slide  div span, .third-slide div span {
+        padding: 3px;
+        font-size: 10x;
+    }
+
+    .third-slide img {
+        height: 40px;
+    }
+
+    .second-slide img {
+        height: 150px;
+    }
+
+    .second-slide h1, .third-slide h1 {
+        text-align: left;
+    }
+
+    .sub-plans {
+        margin-top: -10%;
+    }
+
+    .trending-cards,
+    .membership-conatiner {
+        margin: 15% 25px;
+    }
+
+    .mem-card-img img {
+        height: 120px;
+        transform: rotate(30deg) translateX(60%)  scale(1.3);
+    }
+
+    footer .email-section {
+        flex-direction: column;
+    }
+
+    .main-body .s-foot-inner ul {
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+    }
+    
+    .main-body .s-inputs input {
+        transform: translateY(-10px);
+    }
+
+    .main-body .s-inputs input:focus ~ label {
+        font-size: 12px;
+        transform: translate(2px,-15px);
+    }
+    
+    .select-plans > h2 {
+        font-size: 26px;
+    }
+
+    .alternative-plans .plan-name {
+        width: 100px;
+        margin-bottom: 0;
+    }
+
+    .alternative-plans .plan-name-container {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    
+
+}
+
+@media (max-width:450px) {
+    .carousel {
+        height: 70vh;
+    }
+
+    .c-descript-pos {
+        top: 38%;
+    }
+}
